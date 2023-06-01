@@ -3,7 +3,15 @@
   <component name="NewModuleRootManager">
     <output url="file://$MODULE_DIR$/bin" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$" />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/.metadata" />
+      <excludeFolder url="file://$MODULE_DIR$/Servers/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/day42_html/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/day43_html_css/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/day44_css_js/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/day45_css_js/.settings" />
+      <excludeFolder url="file://$MODULE_DIR$/day46_jquery/.settings" />
+    </content>
     <orderEntry type="sourceFolder" forTests="false" />
   </component>
 </module>
