@@ -68,7 +68,7 @@ replay_pid*
 # .idea/*.iml
 # .idea/modules
 .idea
- *.iml
+*.iml
 # *.ipr
 
 # CMake
