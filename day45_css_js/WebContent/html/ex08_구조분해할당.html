@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>구조분해할당</title>
+</head>
+<body>
+
+<script type="text/javascript">
+    let a,b,rest;
+    // a=10;
+    // b=20;
+    [a, b] = [10, 20]; // 구조 분해 할당 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 JavaScript 표현식입니다.
+
+    [a, b, ...rest] = [10, 20, 30, 40, 50];
+
+    document.writeln(`${a}<br>${b}<br>${rest}`);
+    document.writeln("<hr>")
+
+    const numbers=[1,2,3,4];
+    let fruits = ["apple","banana","tomato"];
+    fruits.forEach(function (value, index, array){
+        // document.writeln(`${array}`)
+        document.writeln(`${index} : ${value} <br>`)
+    })
+
+    const x = fruits.map((fruits,i)=>{
+        // return `${fruits}-${i}`;
+        return{
+            id:i,
+            name:fruits
+        }
+    });
+
+    line()
+    x.forEach(function (value, index, array){
+        document.writeln(`x: ${x[index].id} ${x[index].name}<br>`)
+    });
+    // document.writeln(`x: ${x[0].id} ${x[0].name}`);
+
+
+
+    line()
+    let newLength = fruits.push('오렌지');
+    document.writeln(`${fruits} <br>`)
+    document.writeln(`${newLength} `)
+
+    line()
+
+    function line() {
+        document.writeln("<hr>")
+    }
+</script>
+</body>
+</html>

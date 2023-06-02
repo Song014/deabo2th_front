@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ex09_jquery.html</title>
+
+
+</head>
+<body>
+
+<header><h2>jQuery Sample</h2></header>
+
+<input type="text" id="inputdemo" value="">
+<input type="button" id="btn1" value="변환1">
+<input type="button" id="btn2" value="변환2">
+
+<div class="welcome"></div>
+<div class="welcome"></div>
+<div id="demo">
+    <div class="inner">Create jQUery Test</div>
+</div>
+<hr>
+
+// 문제
+<div id="name" >
+이 부분에 클릭 이벤트가 발생하면 자신이름 출력하기
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+<script src="https://cdn.amcharts.com/lib/5/index.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/xy.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/themes/Animated.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/locales/de_DE.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/geodata/germanyLow.js"></script>
+<script src="https://cdn.amcharts.com/lib/5/fonts/notosans-sc.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $('#name').on('click',function (){
+            $(this).html("송기석")
+                .css({
+                    'font-size':'30px',
+                    'font-weight':'bold'
+                })
+        })
+
+
+        // document.getElementsByTagName("h2")[0].style.color = 'red';
+
+        // $('h2').css({color: "skyblue"});
+        // 체이닝
+        // on(1,2); on('event',function ());
+        // $('.welcome').html('hello world Deabo th2')
+        //     .css({backgroundColor: 'orange'})
+        //     .on('click mousemove keyup',function (){
+        //         $(this).css({backgroundColor: "aqua"})
+        //     });
+        $('.welcome').html('hello world Deabo th2')
+            .css({backgroundColor: 'orange'})
+            .on('click',function (e){
+                // $('.welcome').hide();
+                console.log(e.target)
+                $(this).css({backgroundColor: 'red'})
+            });
+        // .click(function (){
+        //     $(this).css({backgroundColor: 'aqua'})
+        // })
+
+        // 기울기
+        // $('#demo .inner').css('transform', 'rotate(45deg');
+        // $('#demo .inner').css('opacity', '0.5');
+        // $('#demo .inner').css(
+        //     {
+        //         'text-decoration':'underline',
+        //         'color':'aqua',
+        //         'transform': 'rotate(45deg',
+        //         'opacity': '0.5'
+        //     });
+
+
+        // $('h2').css('color','aqua')
+        // $('h2').css('text-decoration','underline')
+        //
+        // $('#demo .inner').css('border-bottom','5px solid red')
+        //
+        // $('#demo').on('mouseover', function () {
+        //     $('.inner').css('background', 'green');
+        // });
+        // $('#demo').on('mouseout', function () {
+        //     $('.inner').css('background', 'white');
+        // });
+        // $("#demo, h2, div").mouseover(function(){
+        //     $(this).css('background','yellow').html("deabo th2");
+        // });
+
+
+    });
+</script>
+
+</body>
+</html>
